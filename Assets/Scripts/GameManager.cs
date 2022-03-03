@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private int numTentativas;          // Armazena as tentativas válidas da rodada
+    private int maxNumTentativas;       // Número máximo de tentativaspara Forca ou Salvação
+    int score = 0;
+
     public GameObject letra;            // prefab da letra no Game
     public GameObject centro;           // objeto de texto que indica o centro da tela
 
@@ -19,8 +23,15 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         centro = GameObject.Find("centroDaTela");
+        
         InitGame();
         InitLetras();
+
+        numTentativas = 0;
+        maxNumTentativas = 10;
+
+        UpdateNumTentativas();
+        UpdateScore();
     }
 
     // Update is called once per frame
@@ -62,6 +73,9 @@ public class GameManager : MonoBehaviour
 
             if(letraTecladaComoInt >= 97 && letraTecladaComoInt <= 122)
             {
+                numTentativas++;
+                UpdateNumTentativas();
+
                 for (int i = 0; i < tamanhoPalavraOculta; i++)
                 {
                     if(!letrasDescobertas[i])
@@ -71,10 +85,25 @@ public class GameManager : MonoBehaviour
                         {
                             letrasDescobertas[i] = true;
                             GameObject.Find("letra" + (i + 1)).GetComponent<Text>().text = letraTeclada.ToString();
+
+                            score = PlayerPrefs.GetInt("score");
+                            score++;
+                            PlayerPrefs.SetInt("score", score);
+                            UpdateScore();
                         }
                     }
                 }
             }
         }
+    }
+
+    void UpdateNumTentativas()
+    {
+        GameObject.Find("numTentativas").GetComponent<Text>().text = numTentativas + " | " + maxNumTentativas;
+    }
+
+    void UpdateScore()
+    {
+        GameObject.Find("scoreUI").GetComponent<Text>().text = "Score: " + score;
     }
 }

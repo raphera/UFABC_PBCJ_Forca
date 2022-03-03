@@ -35,3 +35,20 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/FX.meta
+Assets/FX/ButtonSound.ogg
+Assets/FX/ButtonSound.ogg.meta
+Assets/FX/ButtonSound.wav
+Assets/FX/ButtonSound.wav.meta
+Assets/FX/Ending.wav
+Assets/FX/Ending.wav.meta
+Assets/FX/Git-2.35.1.2-64-bit.exe
+Assets/FX/Git-2.35.1.2-64-bit.exe.meta
+Assets/FX/GitHubDesktopSetup-x64.exe
+Assets/FX/GitHubDesktopSetup-x64.exe.meta
+Assets/FX/Loss.wav
+Assets/FX/Loss.wav.meta
+Assets/FX/Menu.wav
+Assets/FX/Menu.wav.meta
+Assets/FX/Win.wav
+Assets/FX/Win.wav.meta

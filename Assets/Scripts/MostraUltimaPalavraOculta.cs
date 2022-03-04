@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MostraUltimaPalavraOculta : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // Assim que inicia a cena, ele pega o texto de um objeto de outra cena
     void Start()
     {
         GetComponent<Text>().text = PlayerPrefs.GetString("ultimaPalavraOculta");

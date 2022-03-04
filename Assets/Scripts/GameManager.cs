@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         letrasOcultas = palavraOculta.ToCharArray();            // copia-se a palavra no array de letras
     }
 
-    void CheckTeclado()
+    void CheckTeclado() // Verifica se foi digitado alguma letra
     {
         if (Input.anyKeyDown)
         {
@@ -106,17 +106,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void UpdateNumTentativas()
+    void UpdateNumTentativas() // Faz update do numero de tentativas 
     {
         GameObject.Find("numTentativas").GetComponent<Text>().text = "Tentativas: " + numTentativas + " | " + maxNumTentativas;
     }
 
-    void UpdateScore()
+    void UpdateScore() // Faz update do score
     {
         GameObject.Find("scoreUI").GetComponent<Text>().text = "Score: " + score;
     }
 
-    void VerificaSePalavraDescoberta()
+    void VerificaSePalavraDescoberta()  // Verifica se a palavra foi descoberta
     {
         bool condicao = true;
         for (int i = 0; i < palavraOculta.Length; i++)

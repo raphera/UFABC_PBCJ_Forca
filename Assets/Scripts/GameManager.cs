@@ -45,10 +45,11 @@ public class GameManager : MonoBehaviour
         int numLetas = palavraOculta.Length;
         for (int i = 0; i < numLetas; i++)
         {
-            Vector3 novaPosicao = new Vector3(centro.transform.position.x + ((i-numLetas/2.0f)* 80), centro.transform.position.y, centro.transform.position.z);
+            Vector3 novaPosicao = new Vector3((float)(centro.transform.position.x + ((i-(numLetas-1)/2.0f)* 80)), centro.transform.position.y, centro.transform.position.z);
             GameObject l = (GameObject)Instantiate(letra, novaPosicao, Quaternion.identity);
             l.name = "letra" + (i + 1); // nomeia na hierarquia a GameObject com letra-(iésima + 1), i = 1..numLetras
             l.transform.SetParent(GameObject.Find("Canvas").transform); // posiciona-se como filho do GameObject Canvas
+            l.GetComponent<Text>().font = (Font)Resources.Load("Fonts/PWChalk");
         }
     }
 
@@ -107,7 +108,7 @@ public class GameManager : MonoBehaviour
 
     void UpdateNumTentativas()
     {
-        GameObject.Find("numTentativas").GetComponent<Text>().text = numTentativas + " | " + maxNumTentativas;
+        GameObject.Find("numTentativas").GetComponent<Text>().text = "Tentativas: " + numTentativas + " | " + maxNumTentativas;
     }
 
     void UpdateScore()

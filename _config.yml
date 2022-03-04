@@ -1,5 +1,5 @@
 title: Jogo da Forca
-logo: /_assets/tela_inicio.png
+logo: /Compiled/screenshots/tela_inicio.png
 description: Atividade do curso Programação Baseada em Componentes para Jogos - UFABC.
 show_downloads: true
 theme: jekyll-theme-minimal

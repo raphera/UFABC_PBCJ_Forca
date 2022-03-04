@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Lab1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
     path: Assets/Scenes/Lab1_start.unity
     guid: f8e645f8d15307542bacad5a0e825d09
+  - enabled: 1
+    path: Assets/Scenes/Lab1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Lab1_forca.unity
     guid: 4f3b298f0a6bfc74b852d223ccf36f26

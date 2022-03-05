@@ -825,8 +825,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1635927728}
   m_HandleRect: {fileID: 1635927727}
   m_Direction: 2
-  m_Value: 0.97339296
-  m_Size: 0.52888644
+  m_Value: 0.9789728
+  m_Size: 0.47011447
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1228,8 +1228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.9997, y: -165.29933}
-  m_SizeDelta: {x: 646.76, y: 741.18}
+  m_AnchoredPosition: {x: -9.9997, y: -211.62909}
+  m_SizeDelta: {x: 646.76, y: 833.8395}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1596964047
 MonoBehaviour:
@@ -1264,37 +1264,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '-----------------------------------------
-
-    Dupla:
-
-    -----------------------------------------
-
-    11201722433
-
-    Raphael
-    H. N. de Freitas
-
-
-    11201921005
-
-    Leonardo T. Fernandes
-
-    -----------------------------------------
-
-    Fontes
-    de Texto:
-
-    -----------------------------------------
-
-    Grutch Shaded
-
-    Kg
-    Second Chances
-
-    PWChalk
-
-'
+  m_Text: "-----------------------------------------\nDupla:\n-----------------------------------------\n11201722433\nRaphael
+    H. N. de Freitas\n\n11201921005\nLeonardo T. Fernandes\n\n-----------------------------------------\nFontes
+    de Texto:\n-----------------------------------------\nGrutch Shaded\nKg Second
+    Chances\nPWChalk\n\n-----------------------------------------\nAudios e efeitos
+    sonoros:\n-----------------------------------------\nfreesound.org\n\n-----------------------------------------\nBot\xF5es:\n-----------------------------------------\nhttps://viktor-gogela.itch.io/casual-game-buttons-vol-01\n"
 --- !u!222 &1596964048
 CanvasRenderer:
   m_ObjectHideFlags: 0

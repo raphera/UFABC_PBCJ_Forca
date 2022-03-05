@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         centro = GameObject.Find("centroDaTela");
-        
+
         InitGame();
         InitLetras();
 
@@ -40,12 +40,15 @@ public class GameManager : MonoBehaviour
         CheckTeclado();
     }
 
+    /// <summary>
+    /// Inicializa todos os objetos necessários para a gestão da palavra oculta.
+    /// </summary>
     void InitLetras()
     {
         int numLetas = palavraOculta.Length;
         for (int i = 0; i < numLetas; i++)
         {
-            Vector3 novaPosicao = new Vector3((float)(centro.transform.position.x + ((i-(numLetas-1)/2.0f)* 80)), centro.transform.position.y, centro.transform.position.z);
+            Vector3 novaPosicao = new Vector3((float)(centro.transform.position.x + ((i - (numLetas - 1) / 2.0f) * 80)), centro.transform.position.y, centro.transform.position.z);
             GameObject l = (GameObject)Instantiate(letra, novaPosicao, Quaternion.identity);
             l.name = "letra" + (i + 1); // nomeia na hierarquia a GameObject com letra-(iésima + 1), i = 1..numLetras
             l.transform.SetParent(GameObject.Find("Canvas").transform); // posiciona-se como filho do GameObject Canvas
@@ -53,6 +56,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Contém o conjunto de métodos necessários para inicializar o jogo.
+    /// </summary>
     void InitGame()
     {
         //palavraOculta = "Elefante";                             // definição da palavra a ser descoberta (usado no Lab1 - parte A)
@@ -67,6 +73,11 @@ public class GameManager : MonoBehaviour
         letrasOcultas = palavraOculta.ToCharArray();            // copia-se a palavra no array de letras
     }
 
+    /// <summary>
+    ///     Método responsável por checar teclas pressionadas, verifica se é uma letra (a, b,..., z)
+    /// e se a letra está contida na palavra escolhida para o jogo atual. Cotabiliza score, tentativas
+    /// e realiza flag das letras encontradas na palavra para exibição futura na tela.
+    /// </summary>
     void CheckTeclado() // Verifica se foi digitado alguma letra
     {
         if (Input.anyKeyDown)
@@ -74,7 +85,7 @@ public class GameManager : MonoBehaviour
             char letraTeclada = Input.inputString.ToCharArray()[0];
             int letraTecladaComoInt = System.Convert.ToInt32(letraTeclada);
 
-            if(letraTecladaComoInt >= 97 && letraTecladaComoInt <= 122)
+            if (letraTecladaComoInt >= 97 && letraTecladaComoInt <= 122)
             {
                 numTentativas++;
                 UpdateNumTentativas();
@@ -86,10 +97,10 @@ public class GameManager : MonoBehaviour
 
                 for (int i = 0; i < palavraOculta.Length; i++)
                 {
-                    if(!letrasDescobertas[i])
+                    if (!letrasDescobertas[i])
                     {
                         letraTeclada = System.Char.ToUpper(letraTeclada);
-                        if(letrasOcultas[i] == letraTeclada)
+                        if (letrasOcultas[i] == letraTeclada)
                         {
                             letrasDescobertas[i] = true;
                             GameObject.Find("letra" + (i + 1)).GetComponent<Text>().text = letraTeclada.ToString();
@@ -106,16 +117,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void UpdateNumTentativas() // Faz update do numero de tentativas 
+    /// <summary>
+    /// Atualiza o valor do número de tentativas na tela principal de acordo com valor da variável da classe, alterando o texto do componente 'numTentativas'
+    /// no canvas da cena atual.
+    /// </summary>
+    void UpdateNumTentativas()
     {
         GameObject.Find("numTentativas").GetComponent<Text>().text = "Tentativas: " + numTentativas + " | " + maxNumTentativas;
     }
 
+    /// <summary>
+    /// Atualiza o valor do número de score na tela principal de acordo com valor da variável da classe, alterando o texto do componente 'scoreUI'
+    /// no canvas da cena atual.
+    /// </summary>
     void UpdateScore() // Faz update do score
     {
         GameObject.Find("scoreUI").GetComponent<Text>().text = "Score: " + score;
     }
 
+    /// <summary>
+    /// Verifica se todas as letras da palavra foram descobertas para que a cena de vitória seja carregada.
+    /// </summary>
     void VerificaSePalavraDescoberta()  // Verifica se a palavra foi descoberta
     {
         bool condicao = true;
@@ -130,6 +152,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Método resposnsável por pegar uma única palavra de um arquivo de texto
+    /// na pasta de Assets chamado "palavras". O arquivo contem um sequência de
+    /// palavras separadas por um espaço (' ').
+    /// </summary>
+    /// <returns>
+    /// Um objeto do tipo 'string' que é a palavra selecionada no arquivo.
+    /// </returns>
     string PegaUmaPalavraDoArquivo()
     {
         TextAsset t1 = (TextAsset)Resources.Load("palavras", typeof(TextAsset));

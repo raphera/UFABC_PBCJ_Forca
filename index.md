@@ -2,6 +2,8 @@
 
 {% include unityPlayer.html %}
 
+* * *
+
 # Telas do Jogo
 - **Tela Inicial**
 <p align="center">

@@ -1,6 +1,8 @@
 # Jogo da Forca (UFABC_PBCJ_Forca)
 Jogo desenvolvido em Unity como laboratórios 1 e 2 da disciplina Programação Baseada em Componentes para Jogos da UFABC.
 
+[Testar jogo no navegador!](https://raphera.github.io/UFABC_PBCJ_Forca/)
+
 # Telas do Jogo
 - **Tela Inicial**
 <p align="center">

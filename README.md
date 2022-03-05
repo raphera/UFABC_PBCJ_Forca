@@ -1,9 +1,9 @@
-# Jogo da Forca (UFABC_PBCJ_Forca)
+# 🎮 Jogo da Forca (UFABC_PBCJ_Forca)
 Jogo desenvolvido em Unity como laboratórios 1 e 2 da disciplina Programação Baseada em Componentes para Jogos da UFABC.
 
-[Testar jogo no navegador!](https://raphera.github.io/UFABC_PBCJ_Forca/)
+🕹️[Testar jogo no navegador!](https://raphera.github.io/UFABC_PBCJ_Forca/)
 
-# Telas do Jogo
+# 🖼️ Telas do Jogo
 - **Tela Inicial**
 <p align="center">
   <img src="/Compiled/images/tela_inicio.png" />
@@ -29,7 +29,7 @@ Jogo desenvolvido em Unity como laboratórios 1 e 2 da disciplina Programação 
   <img src="/Compiled/images/tela_creditos.png" />
 </p>
 
-# Assets
+# 📂 Assets
 - Músicas e efeitos sonoros: [Freesound](https://freesound.org/).
 - Fontes:
   - [Grutch Shaded](https://www.dafont.com/pt/grutchshaded.font)
@@ -37,7 +37,7 @@ Jogo desenvolvido em Unity como laboratórios 1 e 2 da disciplina Programação 
   - [PWChalk](https://www.dafont.com/pt/pwchalk.font?psize=l)
 - Botões: [CASUAL GAME BUTTONS](https://viktor-gogela.itch.io/casual-game-buttons-vol-01?download)
 
-# Dupla
+# 🤝 Dupla
 - **Raphael Henrique Nunes de Freitas**</br>
 	 **RA**: 11201722433</br>
 	 **E-mail**: raphael.freitas@aluno.ufabc.edu.br
